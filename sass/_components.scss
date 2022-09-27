@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Noto+Sans:ital,wght@0,100;1,200;1,500&display=swap');
+$color-light:white;
+$font-family:'Heebo';
+$fondo:#E5E5E5;
+@mixin btn-base {
+    height: 1.8rem;
+    width: 10rem;
+    background-color: rgba(196, 196, 196, 0);
+    border-style: solid;
+    border-width: 0.14rem;
+    font-size: 0.85rem;
+}
+
+@mixin icon-theme-base {
+    padding: 0 0.3rem;
+    cursor: pointer;
+}
+
+.icono {
+    @include icon-theme-base();
+    background-color: rgba(238, 238, 238, 1);
+    box-shadow: 2px 4px 4px rgba(53.12, 51.58, 51.58, 1);
+    // display: none; // border-radius: 1rem;
+}
+
+.card {
+    background-color: $fondo;
+}
+
+//------ boton contact
+.btn-contact {
+    padding: 0.5rem;
+    height: 3rem;
+    width: 25rem;
+    color: #000;
+    border-color: #000;
+    border-style: solid;
+    border-width: 0.14rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    &:hover {
+        background-color: white;
+        color: #000;
+    }
+}
+
+// ------------------------- icono dark mode
+.icono-dark {
+    @include icon-theme-base();
+    background-color: rgb(7, 7, 7);
+    color: $color-light;
+    box-shadow: 2px 4px 4px rgba(125.38, 124.33, 124.33, 0.25);
+}
+
+// ------------------botones light mode
+.btn-light-line {
+    @include btn-base();
+    border-color: black;
+    // background-color: #E5E5E5;
+    &-bold {
+        @extend .btn-light-line;
+        font-weight: bold;
+    }
+    &:hover {
+        background-color: white;
+    }
+    // flex-direction: row;
+}
+
+.btn-light-line {
+    @include btn-base();
+    border-color: black;
+    &-bold {
+        @extend .btn-light-line;
+        font-weight: bold;
+    }
+    // flex-direction: row;
+}
+
+//-------------- botones dark mode
+.btn-dark-line {
+    @include btn-base();
+    color: $color-light;
+    border-color: white;
+    &-bold {
+        @extend .btn-dark-line;
+        font-weight: bold;
+    }
+    // flex-direction: row;
+}
+
+.btn-dark-line {
+    @include btn-base();
+    color: $color-light;
+    border-color: white;
+    &-bold {
+        @extend .btn-dark-line;
+        font-weight: bold;
+    }
+    // flex-direction: row;
+}
+
+.nav-link {
+    // font-size: 0.4rem;
+    list-style: none;
+    display: inline;
+    color: black;
+    font-family: $font-family;
+    font-weight: bold;
+}
+
+.card-img-top {
+    height: 12rem;
+}
+
+.main-social {
+    margin: 3rem 0;
+    .bi-social {
+        list-style: none;
+        display: inline;
+        margin-right: 2rem;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+    }
+}
+
+.main-social-footer {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 10rem;
+    .bi-social-footer {
+        color: white;
+        // justify-content: center;
+        &:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+    }
+}

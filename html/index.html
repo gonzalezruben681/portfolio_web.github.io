@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rubén Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand justify-content-center" href="#home">
+                <img src="../assets/img/logo_ruben_dark.png" alt="Ruben portfolio" class="logo">
+            </a>
+            <div class="btn-response">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="offcanvas offcanvas-end gap-2" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand justify-content-center" href="#home">
+                            <img src="../assets/img/logo_ruben_dark.png" alt="Ruben portfolio" class="logo">
+                            <span>Rúben Portfolio
+                            </span>
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#projects">PROJECTOS</a></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">SOBRE MI</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="theme d-flex flex-column justify-content-center">
+                    <label class="bi bi-moon icono-dark rounded-circle" for="btn-check" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar al modo Oscuro"></label>
+                    <label class="bi bi-sun icono d-none rounded-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="Cambiar al modo Claro" for="btn-check"></label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sección principal -->
+    <section class="container">
+        <div class="sec-home">
+            <div class="home-cta">
+                <span><strong>Hola, soy Rubén Darío González.</strong> Bienvenido a mi portfolio.</span>
+                <h2 class="home-title ">Diseñador y Desarrollador
+                </h2>
+                <p class="home-description">
+                    Apasionado por la tecnología y sus posibilidades.
+                </p>
+                <div class="main-social ">
+                    <a href="mailto:gonzalezruben681@gmail.com
+                    " data-bs-toggle="tooltip" data-bs-placement="top" title="Email" class="bi bi-social fs-5 bi-envelope"></a>
+                    <a href="https://github.com/gonzalezruben681
+                    " target="blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Github" class="bi bi-social fs-5 bi-github"></a>
+                    <a href="https://mx.linkedin.com/in/rub%C3%A9n-dar%C3%ADo-gonz%C3%A1lez-pach%C3%B3n-06360868?original_referer=https%3A%2F%2Fwww.bing.com%2F" data-bs-toggle="tooltip" target="blank" data-bs-placement="top" title="Linkedin" class="bi bi-social fs-5 bi-linkedin"></a>
+                    <!-- <i class="bi bi-behance "></i> -->
+                </div>
+            </div>
+            <div class="home-img d-none d-md-block">
+                <img src="../assets/img/home-img 1.png " alt="monumento ">
+            </div>
+            <div class="scroll-down-btn ">
+                <div class="mouse "></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección proyectos -->
+    <section class="sec-projects" id="projects">
+        <div class="container">
+            <div class="intro ">
+                <h3 class="intro-title">mis proyectos</h3>
+                <p class="description-title">Una colección de mis proyectos recientes.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-auto">
+                    <div class="card mt-5">
+                        <img src="../assets/img/porfolio_dark.png" class="card-img-top-1 " alt="... ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Portfolio</h5>
+                            <p class="card-text ">Website personal
+                                <br>HTML-CSS/SCSS-Javascript</p>
+                            <div class="d-flex justify-content-between ">
+                                <button class="btn-light-line ">
+                        Github Repo
+                    </button>
+                                <button class="btn-light-line-bold ">
+                        See it live!
+                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-auto">
+                    <div class="card mt-5">
+                        <img src="../assets/img/contenido-no-disponible.jpg " class="card-img-top-2 " alt="... ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Proximamente...</h5>
+                            <p class="card-text ">...</p>
+                            <div class="d-flex justify-content-between ">
+                                <button class="btn-light-line " disabled>
+                        Github Repo
+                    </button>
+                                <button class="btn-light-line-bold " disabled>
+                        See it live!
+                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección biografia -->
+    <section class="sec-about" id="about">
+        <div class="container">
+            <div class="intro">
+                <h3 class="intro-title">Sobre mi</h3>
+                <p class="description-title">Pequeños datos sobre mí mismo.</p>
+            </div>
+            <div class="description">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="description-about">
+                            Hola. Mi nombre es <strong>Rubén Darío González</strong>, soy de Colombia y actualmente vivo en México desde hace 14 años. Soy Licenciado en Ingenieria en Sistemas Computacionales de la Universidad Tres Culturas. Siempre me
+                            ha gustado la tecnología y sus posibilidades, tengo fascinación por las artes como la música, me apasiona saber cómo funcionaban las cosas en el mundo digital. Actualmente, me encuentro constantemente estudiando Diseño/UI y
+                            Desarrollo de aplicaciónes moviles multiplataforma y web. Me ha parecido la mejor manera de aplicar las habilidades que he adquirido. <br/><br/> Soy dedicado y estoy interesado y ansioso por brindar constantemente mi mejor
+                            esfuerzo en cualquier tarea que se me asigne. siempre estoy buscando la manera de actualizar y enriquecer mis conocimientos, para brindar el mejor servicio.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <div class="image">
+                            <img class="image-about" src="../assets/img/ruben.png" alt="Rubén Darío González" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="tools-title">Herramientas y tecnologías que utilizo</h4>
+            <div class="tools-tech">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="tools">
+                            <h5 class="tools-description-title">Creative Design
+                            </h5>
+                            <p>Figma<br/>Adobe Photoshop<br/>Sony Vegas<br/></p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="tech">
+                            <h5 class="tools-description-title">Develoment
+                            </h5>
+                            <p>HTML<br/>CSS/SCSS<br/>Javascript<br/> Dart/Flutter
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <p class="text-end"><cite>“El aprendizaje permanente añade años a tu vida <br/>  y vida a tus años".</cite> <br> <strong>-Jim Kwik</strong> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- sección contacto -->
+    <section class="sec-contact " id="contact">
+        <div class="container mt-2 mb-2">
+            <div class="contact">
+                <div class="intro">
+                    <h3 class="intro-title">Contacto</h3>
+                    <p class="description-title">Si quieres decirme algo, no dudes en contactarme.</p>
+                </div>
+                <a href="mailto:gonzalezruben681@gmail.com" class="btn-contact fs-4 mb-2">
+                    <i class="bi bi-social bi-envelope"></i> gonzalezruben681@gmail.com
+                </a>
+            </div>
+            <img class="contact-img d-none d-md-block" src="../assets/img/contact-image 1.png" alt="imagen-circulos">
+        </div>
+
+    </section>
+
+    <div class="container footer">
+        <span class="footer-content ">Made by <strong>Rubén Darío Gonzáléz</strong><hr> Copyright 2022</span>
+        <div class="main-social-footer ">
+            <a href="mailto:gonzalezruben681@gmail.com
+            " data-bs-toggle="tooltip" data-bs-placement="top" title="Email" class="bi fs-md-5  bi-social-footer bi-envelope"></a>
+            <a href="https://github.com/gonzalezruben681
+            " target="blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Github" class="bi fs-md-5  bi-social-footer bi-github"></a>
+            <a href="https://mx.linkedin.com/in/rub%C3%A9n-dar%C3%ADo-gonz%C3%A1lez-pach%C3%B3n-06360868?original_referer=https%3A%2F%2Fwww.bing.com%2F" data-bs-toggle="tooltip" target="blank" data-bs-placement="top" title="Linkedin" class="bi fs-md-5  bi-social-footer bi-linkedin"></a>
+            <!-- <i class="bi bi-behance "></i> -->
+        </div>
+    </div>
+
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8 " crossorigin="anonymous "></script>
+<script src="../js/index.js"></script>
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+</html>
+
+</html>

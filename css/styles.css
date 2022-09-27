@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Noto+Sans:ital,wght@0,100;1,200;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap");
+.icono {
+  padding: 0 0.3rem;
+  cursor: pointer;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 2px 4px 4px rgb(53, 52, 52);
+}
+
+.card {
+  background-color: #E5E5E5;
+}
+
+.btn-contact {
+  padding: 0.5rem;
+  height: 3rem;
+  width: 25rem;
+  color: #000;
+  border-color: #000;
+  border-style: solid;
+  border-width: 0.14rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.btn-contact:hover {
+  background-color: white;
+  color: #000;
+}
+
+.icono-dark {
+  padding: 0 0.3rem;
+  cursor: pointer;
+  background-color: rgb(7, 7, 7);
+  color: white;
+  box-shadow: 2px 4px 4px rgba(125, 124, 124, 0.25);
+}
+
+.btn-light-line, body.dark .sec-projects .row .btn-light-line-bold, body.dark .sec-about .row .btn-light-line-bold, body.dark .sec-contact .row .btn-light-line-bold, .btn-light-line-bold {
+  height: 1.8rem;
+  width: 10rem;
+  background-color: rgba(196, 196, 196, 0);
+  border-style: solid;
+  border-width: 0.14rem;
+  font-size: 0.85rem;
+  border-color: black;
+}
+.btn-light-line-bold {
+  font-weight: bold;
+}
+.btn-light-line:hover, body.dark .sec-projects .row .btn-light-line-bold:hover, body.dark .sec-about .row .btn-light-line-bold:hover, body.dark .sec-contact .row .btn-light-line-bold:hover, .btn-light-line-bold:hover {
+  background-color: white;
+}
+
+.btn-light-line, body.dark .sec-projects .row .btn-light-line-bold, body.dark .sec-about .row .btn-light-line-bold, body.dark .sec-contact .row .btn-light-line-bold, .btn-light-line-bold {
+  height: 1.8rem;
+  width: 10rem;
+  background-color: rgba(196, 196, 196, 0);
+  border-style: solid;
+  border-width: 0.14rem;
+  font-size: 0.85rem;
+  border-color: black;
+}
+.btn-light-line-bold {
+  font-weight: bold;
+}
+
+.btn-dark-line, .btn-dark-line-bold {
+  height: 1.8rem;
+  width: 10rem;
+  background-color: rgba(196, 196, 196, 0);
+  border-style: solid;
+  border-width: 0.14rem;
+  font-size: 0.85rem;
+  color: white;
+  border-color: white;
+}
+.btn-dark-line-bold {
+  font-weight: bold;
+}
+
+.btn-dark-line, .btn-dark-line-bold {
+  height: 1.8rem;
+  width: 10rem;
+  background-color: rgba(196, 196, 196, 0);
+  border-style: solid;
+  border-width: 0.14rem;
+  font-size: 0.85rem;
+  color: white;
+  border-color: white;
+}
+.btn-dark-line-bold {
+  font-weight: bold;
+}
+
+.nav-link {
+  list-style: none;
+  display: inline;
+  color: black;
+  font-family: "Heebo";
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 12rem;
+}
+
+.main-social {
+  margin: 3rem 0;
+}
+.main-social .bi-social {
+  list-style: none;
+  display: inline;
+  margin-right: 2rem;
+  color: #000;
+  text-decoration: none;
+}
+.main-social .bi-social:hover {
+  text-decoration: underline;
+  color: grey;
+}
+
+.main-social-footer {
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: center;
+  width: 10rem;
+}
+.main-social-footer .bi-social-footer {
+  color: white;
+}
+.main-social-footer .bi-social-footer:hover {
+  text-decoration: underline;
+  color: grey;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #E5E5E5;
+  transition: 0.3s ease all;
+}
+body.dark {
+  color: #EFEFEF;
+  background-color: #1D1D1E;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  /* IE ni Safari soporta sticky */
+  background-color: #e5e5e5;
+  color: white;
+  top: 0px;
+  z-index: 2;
+}
+.navbar .theme {
+  order: 1;
+}
+.navbar .btn-response {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .navbar-toggler {
+  border-color: #1D1D1E;
+  color: #1D1D1E;
+}
+.navbar .navbar-toggler .bi-list {
+  color: #1D1D1E;
+}
+body.dark .navbar {
+  transition: 0.3s ease all;
+  background-color: #1D1D1E;
+}
+body.dark .navbar .nav-link {
+  color: #EFEFEF;
+}
+body.dark .navbar .nav-link:hover {
+  color: grey;
+}
+body.dark .navbar .bi-sun {
+  color: #1D1D1E;
+}
+body.dark .navbar .navbar-brand img {
+  content: url("../assets/img/logo_ruben_light.png");
+}
+body.dark .navbar .navbar-toggler {
+  border-color: #EFEFEF;
+  color: #EFEFEF;
+}
+body.dark .navbar .navbar-toggler .bi-list {
+  color: #EFEFEF;
+}
+
+.offcanvas {
+  background-color: #E5E5E5;
+}
+.offcanvas .offcanvas-header {
+  font-family: "Heebo";
+  font-weight: bold;
+}
+.offcanvas .btn-close {
+  background-color: white;
+}
+body.dark .offcanvas {
+  background-color: #1D1D1E;
+}
+body.dark .offcanvas span {
+  color: #EFEFEF;
+}
+body.dark .offcanvas .btn-close {
+  background-color: #EFEFEF;
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.sec-home {
+  display: flex;
+  align-items: flex-end;
+  text-align: start;
+}
+.sec-home .home-cta {
+  width: 45rem;
+  flex: 1;
+  font-family: "Heebo";
+}
+.sec-home .home-cta span {
+  font-size: 1.2rem;
+}
+.sec-home .home-cta .home-title {
+  font-size: 3rem;
+}
+.sec-home .home-cta .home-description {
+  font-weight: 500;
+}
+.sec-home .home-img img {
+  height: 35rem;
+}
+body.dark .sec-home .main-social .bi-social {
+  color: #EFEFEF;
+}
+body.dark .sec-home .main-social .bi-social:hover {
+  color: grey;
+}
+
+.scroll-down-btn {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border: 2px solid black;
+  width: 1.2rem;
+  height: 2rem;
+  border-radius: 85px;
+  left: -50%;
+  transform: translatex(-70%);
+}
+.scroll-down-btn .mouse {
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  width: 0.1rem;
+  height: 0.3rem;
+  border-radius: 15px;
+  animation: mouse 2s infinite;
+}
+body.dark .scroll-down-btn {
+  border: 2px solid #EFEFEF;
+}
+body.dark .scroll-down-btn .mouse {
+  background-color: #EFEFEF;
+}
+
+@keyframes mouse {
+  0% {
+    top: 20%;
+    transform: translate(-50%, 20%);
+    opacity: 1;
+  }
+  100% {
+    top: 50%;
+    transform: translate(-50%, 60%);
+    opacity: 0;
+  }
+}
+.sec-projects, .sec-contact, .sec-about {
+  width: 100%;
+  margin: auto;
+  padding: 3rem;
+  text-align: start;
+}
+.sec-projects .row, .sec-contact .row, .sec-about .row {
+  gap: 20rem;
+}
+.sec-projects .row .card, .sec-contact .row .card, .sec-about .row .card {
+  width: 23rem;
+}
+.sec-projects .row .card .card-img-top-2, .sec-contact .row .card .card-img-top-2, .sec-about .row .card .card-img-top-2 {
+  height: 13rem;
+}
+body.dark .sec-projects .row .card, body.dark .sec-contact .row .card, body.dark .sec-about .row .card {
+  background-color: #1D1D1E;
+}
+body.dark .sec-projects .row .card .card-img-top-1, body.dark .sec-contact .row .card .card-img-top-1, body.dark .sec-about .row .card .card-img-top-1 {
+  content: url("../assets/img/portfolio.png");
+}
+body.dark .sec-projects .row .btn-light-line, body.dark .sec-contact .row .btn-light-line, body.dark .sec-about .row .btn-light-line, body.dark .sec-projects .row .btn-light-line-bold, body.dark .sec-contact .row .btn-light-line-bold, body.dark .sec-about .row .btn-light-line-bold {
+  color: #EFEFEF;
+  border-color: #EFEFEF;
+}
+body.dark .sec-projects .row .btn-light-line:hover, body.dark .sec-contact .row .btn-light-line:hover, body.dark .sec-about .row .btn-light-line:hover, body.dark .sec-projects .row .btn-light-line-bold:hover, body.dark .sec-contact .row .btn-light-line-bold:hover, body.dark .sec-about .row .btn-light-line-bold:hover {
+  border-color: grey;
+  color: #1D1D1E;
+}
+.sec-projects .intro .intro-title, .sec-projects .sec-contact .intro-title, .sec-contact .intro .intro-title, .sec-contact .sec-contact .intro-title, .sec-projects .sec-about .intro-title, .sec-contact .sec-about .intro-title, .sec-about .intro .intro-title, .sec-about .sec-contact .intro-title, .sec-about .sec-about .intro-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-family: "Heebo";
+}
+.sec-projects .intro .decription-title, .sec-projects .sec-contact .decription-title, .sec-contact .intro .decription-title, .sec-contact .sec-contact .decription-title, .sec-projects .sec-about .decription-title, .sec-contact .sec-about .decription-title, .sec-about .intro .decription-title, .sec-about .sec-contact .decription-title, .sec-about .sec-about .decription-title {
+  font-weight: 400;
+  font-family: "Heebo";
+}
+
+.sec-about .row {
+  gap: 2.5rem;
+}
+.sec-about .description {
+  text-align: justify;
+}
+.sec-about .description .description-about {
+  font-size: 1rem;
+  font-family: "Heebo";
+}
+.sec-about .description .image-about {
+  width: 31rem;
+  height: 31rem;
+}
+.sec-about .tools-title {
+  font-family: "Heebo";
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: black;
+}
+body.dark .sec-about .tools-title {
+  color: #EFEFEF;
+}
+.sec-about .tools-tech .row .tools .tools-description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 100%;
+  color: black;
+}
+.sec-about .tools-tech .row .tools .description {
+  font-size: 1rem;
+  line-height: 40px;
+  color: black;
+  font-family: "Heebo";
+}
+.sec-about .tools-tech .row cite {
+  font-family: "Grape Nuts", cursive;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.sec-contact .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec-contact .contact-img {
+  height: 23rem;
+}
+body.dark .sec-contact .contact-img {
+  height: 23rem;
+  content: url("../assets/img/contact-image-light 1.png");
+}
+body.dark .sec-contact .contact .btn-contact {
+  color: #EFEFEF;
+  border-color: #EFEFEF;
+}
+body.dark .sec-contact .contact .btn-contact:hover {
+  border-color: grey;
+  color: #1D1D1E;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  margin: auto;
+  padding: 1.2rem;
+  max-width: 100%;
+}
+.footer .footer-content {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: white;
+}
+.footer .footer-content hr {
+  flex-grow: -2;
+  width: 0.5rem;
+  border-top: 2px solid white;
+}
+body.dark .footer {
+  background-color: #EFEFEF;
+  color: #1D1D1E;
+}
+body.dark .footer .main-social-footer .bi-social-footer {
+  color: #1D1D1E;
+}
+body.dark .footer .main-social-footer .bi-social-footer:hover {
+  color: grey;
+}
+body.dark .footer .footer-content {
+  color: #1D1D1E;
+}
+body.dark .footer .footer-content hr {
+  color: #1D1D1E;
+}
+
+@media (max-width: 990px) {
+  .navbar .btn-response {
+    display: flex;
+    justify-content: space-around;
+    width: 8rem;
+  }
+  .navbar .btn-response .theme {
+    order: -1;
+  }
+  .navbar .offcanvas .offcanvas-body .navbar-nav {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .scroll-down-btn {
+    left: -50%;
+  }
+  .sec-home {
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  .sec-home .home-cta {
+    text-align: center;
+  }
+  .sec-home .home-cta span {
+    font-size: 1rem;
+  }
+  .sec-projects .row, .sec-about .row, .sec-contact .row {
+    gap: 2rem;
+  }
+  .sec-projects .intro, .sec-about .intro, .sec-contact .intro, .sec-projects .sec-about, .sec-about .sec-about, .sec-contact .sec-about, .sec-projects .sec-contact, .sec-about .sec-contact, .sec-contact .sec-contact {
+    text-align: center;
+  }
+  .sec-about .description .row {
+    gap: 2rem;
+  }
+  .sec-about .description .image-about {
+    width: 16rem;
+    height: 16rem;
+  }
+  .sec-about .tools-title {
+    margin-top: 0.6rem;
+  }
+  .sec-about .tools-tech .row {
+    gap: 0.5rem;
+  }
+  .sec-contact {
+    background-image: url("../assets/img/contact-image 1.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 45%;
+  }
+  body.dark .sec-contact {
+    background-image: url("../assets/img/contact-image-light 1.png");
+  }
+  body.dark .sec-contact .contact .btn-contact {
+    background-color: #1D1D1E;
+  }
+  body.dark .sec-contact .contact .btn-contact:hover {
+    background-color: white;
+    border-color: grey;
+    color: #1D1D1E;
+  }
+  .sec-contact .btn-contact {
+    background-color: #E5E5E5;
+  }
+  .sec-contact .btn-contact:hover {
+    background-color: white;
+  }
+  .footer .footer-content {
+    font-size: 0.72rem;
+    color: white;
+  }
+  .footer .footer-content hr {
+    width: 0.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
