@@ -299,14 +299,11 @@ body.dark .scroll-down-btn .mouse {
 .sec-projects .row .card, .sec-contact .row .card, .sec-about .row .card {
   width: 23rem;
 }
-.sec-projects .row .card .card-img-top-2, .sec-contact .row .card .card-img-top-2, .sec-about .row .card .card-img-top-2 {
-  height: 13rem;
-}
 body.dark .sec-projects .row .card, body.dark .sec-contact .row .card, body.dark .sec-about .row .card {
   background-color: #1D1D1E;
 }
 body.dark .sec-projects .row .card .card-img-top-1, body.dark .sec-contact .row .card .card-img-top-1, body.dark .sec-about .row .card .card-img-top-1 {
-  content: url("../assets/img/portfolio.png");
+  content: url("../assets/img/Portfolio.png");
 }
 body.dark .sec-projects .row .btn-light-line, body.dark .sec-contact .row .btn-light-line, body.dark .sec-about .row .btn-light-line, body.dark .sec-projects .row .btn-light-line-bold, body.dark .sec-contact .row .btn-light-line-bold, body.dark .sec-about .row .btn-light-line-bold {
   color: #EFEFEF;
@@ -383,6 +380,7 @@ body.dark .sec-contact .contact-img {
 body.dark .sec-contact .contact .btn-contact {
   color: #EFEFEF;
   border-color: #EFEFEF;
+  font-size: 2rem;
 }
 body.dark .sec-contact .contact .btn-contact:hover {
   border-color: grey;
@@ -455,8 +453,17 @@ body.dark .footer .footer-content hr {
   .sec-projects .row, .sec-about .row, .sec-contact .row {
     gap: 2rem;
   }
-  .sec-projects .intro, .sec-about .intro, .sec-contact .intro, .sec-projects .sec-about, .sec-about .sec-about, .sec-contact .sec-about, .sec-projects .sec-contact, .sec-about .sec-contact, .sec-contact .sec-contact {
+  .sec-projects .row .intro, .sec-about .row .intro, .sec-contact .row .intro, .sec-projects .row .sec-about, .sec-about .row .sec-about, .sec-contact .row .sec-about, .sec-projects .row .sec-contact, .sec-about .row .sec-contact, .sec-contact .row .sec-contact {
     text-align: center;
+  }
+  .sec-projects .row .card, .sec-about .row .card, .sec-contact .row .card {
+    width: 18rem;
+  }
+  .sec-projects .row .card .btn-light-line, .sec-about .row .card .btn-light-line, .sec-contact .row .card .btn-light-line, body.dark .sec-projects .row .card .btn-light-line-bold, body.dark .sec-about .row .card .btn-light-line-bold, body.dark .sec-contact .row .card .btn-light-line-bold {
+    width: 7.5rem;
+  }
+  .sec-projects .row .card .btn-light-line-bold, .sec-about .row .card .btn-light-line-bold, .sec-contact .row .card .btn-light-line-bold {
+    width: 7.5rem;
   }
   .sec-about .description .row {
     gap: 2rem;
@@ -477,22 +484,26 @@ body.dark .footer .footer-content hr {
     background-position: 100%;
     background-size: 45%;
   }
+  .sec-contact .btn-contact {
+    background-color: #E5E5E5;
+    width: 6rem;
+    font-size: 1rem;
+  }
+  .sec-contact .btn-contact:hover {
+    background-color: white;
+  }
   body.dark .sec-contact {
     background-image: url("../assets/img/contact-image-light 1.png");
   }
   body.dark .sec-contact .contact .btn-contact {
     background-color: #1D1D1E;
+    width: 6rem;
+    font-size: 1rem;
   }
   body.dark .sec-contact .contact .btn-contact:hover {
     background-color: white;
     border-color: grey;
     color: #1D1D1E;
-  }
-  .sec-contact .btn-contact {
-    background-color: #E5E5E5;
-  }
-  .sec-contact .btn-contact:hover {
-    background-color: white;
   }
   .footer .footer-content {
     font-size: 0.72rem;

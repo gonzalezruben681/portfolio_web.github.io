@@ -1,441 +1,452 @@
-    @use "components";
-    @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
-    $fondo_dark:#1D1D1E;
-    $color_dark_items:#EFEFEF;
-    $fondo_light:#E5E5E5;
-    @mixin section-display {
-        width: 100%;
-        margin: auto;
-        // max-width: 90%;
-        padding: 3rem;
-        text-align: start;
-    }
-    
-    body {
-        padding: 0;
-        margin: 0;
-        background-color: $fondo_light;
-        transition: .3s ease all;
-        &.dark {
-            color: $color_dark_items;
-            background-color: $fondo_dark;
-        }
-    }
-    
-    .navbar {
-        position: -webkit-sticky;
-        /* Safari */
-        position: sticky;
-        /* IE ni Safari soporta sticky */
-        background-color: rgba($color: #E5E5E5, $alpha: 1.0);
-        color: white;
-        top: 0px;
-        z-index: 2;
-        .theme {
-            order: 1;
-        }
-        .btn-response {
-            display: flex;
-            justify-content: space-around;
-        }
-        .navbar-toggler {
-            border-color: $fondo_dark;
-            color: $fondo_dark;
-            .bi-list {
-                color: $fondo_dark;
+            @use "components";
+            @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+            $fondo_dark:#1D1D1E;
+            $color_dark_items:#EFEFEF;
+            $fondo_light:#E5E5E5;
+            @mixin section-display {
+                width: 100%;
+                margin: auto;
+                // max-width: 90%;
+                padding: 3rem;
+                text-align: start;
             }
-        }
-        body.dark & {
-            transition: .3s ease all;
-            background-color: $fondo_dark;
-            .nav-link {
-                color: $color_dark_items;
-                &:hover {
-                    color: grey;
-                }
-            }
-            .bi-sun {
-                color: $fondo_dark;
-            }
-            .navbar-brand {
-                img {
-                    content: url("../assets/img/logo_ruben_light.png");
-                }
-            }
-            .navbar-toggler {
-                border-color: $color_dark_items;
-                color: $color_dark_items;
-                .bi-list {
+            
+            body {
+                padding: 0;
+                margin: 0;
+                background-color: $fondo_light;
+                transition: .3s ease all;
+                &.dark {
                     color: $color_dark_items;
-                }
-            }
-        }
-    }
-    
-    .offcanvas {
-        background-color: components.$fondo;
-        .offcanvas-header {
-            font-family: components.$font-family;
-            font-weight: bold;
-        }
-        .btn-close {
-            background-color: white;
-        }
-        body.dark & {
-            background-color: $fondo_dark;
-            span {
-                color: $color_dark_items;
-            }
-            .btn-close {
-                background-color: $color_dark_items;
-            }
-        }
-    }
-    
-    .logo {
-        width: 3rem;
-        height: 3rem;
-    }
-    
-    //--------------------- SEC HOME
-    .sec-home {
-        display: flex;
-        align-items: flex-end;
-        text-align: start;
-        .home-cta {
-            width: 45rem;
-            flex: 1;
-            font-family: components.$font-family;
-            span {
-                font-size: 1.2rem;
-            }
-            .home-title {
-                font-size: 3rem;
-            }
-            .home-description {
-                font-weight: 500;
-            }
-        }
-        .home-img {
-            img {
-                height: 35rem;
-            }
-        }
-        body.dark & {
-            .main-social {
-                .bi-social {
-                    color: $color_dark_items;
-                    &:hover {
-                        color: grey;
-                    }
-                }
-            }
-        }
-    }
-    
-    //---------------------- icono animado mouse
-    .scroll-down-btn {
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        border: 2px solid black;
-        width: 1.2rem;
-        height: 2rem;
-        border-radius: 85px;
-        left: -50%;
-        // transform: translateX(50%);
-        transform: translatex(-70%);
-        .mouse {
-            position: absolute;
-            background-color: black;
-            left: 50%;
-            width: 0.1rem;
-            height: 0.3rem;
-            border-radius: 15px;
-            animation: mouse 2s infinite;
-        }
-        body.dark & {
-            border: 2px solid $color_dark_items;
-            .mouse {
-                background-color: $color_dark_items;
-            }
-        }
-    }
-    
-    @keyframes mouse {
-        0% {
-            top: 20%;
-            transform: translate(-50%, 20%);
-            opacity: 1;
-        }
-        100% {
-            top: 50%;
-            transform: translate(-50%, 60%);
-            opacity: 0;
-        }
-    }
-    
-    //------------------- SEC PROJECTS
-    .sec-projects {
-        @include section-display();
-        .row {
-            gap: 20rem;
-            .card {
-                width: 23rem;
-                .card-img-top-2 {
-                    height: 13rem;
-                }
-            }
-            body.dark & {
-                .card {
                     background-color: $fondo_dark;
-                    .card-img-top-1 {
-                        content: url("../assets/img/portfolio.png");
-                    }
-                }
-                .btn-light-line {
-                    color: $color_dark_items;
-                    border-color: $color_dark_items;
-                    &:hover {
-                        border-color: grey;
-                        color: $fondo_dark;
-                    }
-                }
-                .btn-light-line-bold {
-                    @extend .btn-light-line;
                 }
             }
-        }
-        .intro {
-            .intro-title {
-                font-size: 3.5rem;
-                font-weight: 900;
-                font-family: components.$font-family;
-            }
-            .decription-title {
-                font-weight: 400;
-                font-family: components.$font-family;
-            }
-        }
-    }
-    
-    //----------------------SEC ABOUT
-    .sec-about {
-        @extend .sec-projects,
-        .intro;
-        .row {
-            gap: 2.5rem;
-        }
-        .description {
-            text-align: justify;
-            .description-about {
-                font-size: 1rem;
-                font-family: components.$font-family;
-            }
-            .image-about {
-                width: 31rem;
-                height: 31rem;
-            }
-        }
-        .tools-title {
-            font-family: components.$font-family;
-            font-size: 1.5rem;
-            font-weight: 700;
-            line-height: 100%;
-            color: black;
-            // margin: 1.2rem 0;
-            body.dark & {
-                color: $color_dark_items;
-            }
-        }
-        .tools-tech {
-            .row {
-                .tools {
-                    .tools-description {
-                        font-size: 1.2rem;
-                        font-weight: 500;
-                        line-height: 100%;
-                        color: black;
-                    }
-                    .description {
-                        font-size: 1rem;
-                        line-height: 40px;
-                        color: black;
-                        font-family: components.$font-family;
-                    }
-                }
-                cite {
-                    font-family: 'Grape Nuts', cursive;
-                    text-align: center;
-                    font-size: 2rem;
-                }
-            }
-        }
-    }
-    
-    //---------------------- SEC CONTACT
-    .sec-contact {
-        @extend .sec-projects,
-        .intro;
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .contact-img {
-            height: 23rem;
-        }
-        body.dark & {
-            .contact-img {
-                height: 23rem;
-                content: url("../assets/img/contact-image-light\ 1.png");
-            }
-            .contact {
-                .btn-contact {
-                    color: $color_dark_items;
-                    border-color: $color_dark_items;
-                    &:hover {
-                        border-color: grey;
-                        color: $fondo_dark;
-                    }
-                }
-            }
-        }
-    }
-    
-    //---------------------- SEC FOOTER
-    .footer {
-        display: flex;
-        justify-content: space-around;
-        background-color: black;
-        margin: auto;
-        padding: 1.2rem;
-        max-width: 100%;
-        .footer-content {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-            color: white;
-            hr {
-                flex-grow: -2;
-                width: 0.5rem;
-                // border: none;
-                border-top: 2px solid white;
-            }
-        }
-        body.dark & {
-            background-color: $color_dark_items;
-            color: $fondo_dark;
-            .main-social-footer {
-                .bi-social-footer {
-                    color: $fondo_dark;
-                    &:hover {
-                        color: grey;
-                    }
-                }
-            }
-            .footer-content {
-                color: #1D1D1E;
-                hr {
-                    color: #1D1D1E;
-                }
-            }
-        }
-    }
-    
-    @media(max-width: 990px) {
-        .navbar {
-            .btn-response {
+            
+            .navbar {
+                position: -webkit-sticky;
+                /* Safari */
+                position: sticky;
+                /* IE ni Safari soporta sticky */
+                background-color: rgba($color: #E5E5E5, $alpha: 1.0);
+                color: white;
+                top: 0px;
+                z-index: 2;
                 .theme {
-                    order: -1;
+                    order: 1;
                 }
-                display: flex;
-                justify-content: space-around;
-                width: 8rem;
-            }
-            .offcanvas {
-                .offcanvas-body {
-                    .navbar-nav {
-                        gap: 2rem;
+                .btn-response {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                .navbar-toggler {
+                    border-color: $fondo_dark;
+                    color: $fondo_dark;
+                    .bi-list {
+                        color: $fondo_dark;
                     }
                 }
-            }
-        }
-    }
-    
-    @media (max-width: 768px) {
-        .scroll-down-btn {
-            left: -50%;
-        }
-        .sec-home {
-            margin-top: 0.5rem;
-            justify-content: center;
-            .home-cta {
-                text-align: center;
-                span {
-                    font-size: 1rem;
-                }
-            }
-        }
-        .sec-projects {
-            .row {
-                gap: 2.0rem;
-            }
-            .intro {
-                text-align: center;
-            }
-        }
-        .sec-about {
-            .description {
-                .row {
-                    gap: 2.0rem;
-                }
-                .image-about {
-                    width: 16rem;
-                    height: 16rem;
-                }
-            }
-            .tools-title {
-                margin-top: 0.6rem;
-            }
-            .tools-tech {
-                .row {
-                    gap: 0.5rem;
-                }
-            }
-        }
-        .sec-contact {
-            background-image: url("../assets/img/contact-image 1.png");
-            background-repeat: no-repeat;
-            background-position: 100%;
-            background-size: 45%;
-            body.dark & {
-                background-image: url("../assets/img/contact-image-light\ 1.png");
-                .contact {
-                    .btn-contact {
-                        background-color: #1D1D1E;
+                body.dark & {
+                    transition: .3s ease all;
+                    background-color: $fondo_dark;
+                    .nav-link {
+                        color: $color_dark_items;
                         &:hover {
-                            background-color: white;
-                            border-color: grey;
-                            color: $fondo_dark;
+                            color: grey;
+                        }
+                    }
+                    .bi-sun {
+                        color: $fondo_dark;
+                    }
+                    .navbar-brand {
+                        img {
+                            content: url("../assets/img/logo_ruben_light.png");
+                        }
+                    }
+                    .navbar-toggler {
+                        border-color: $color_dark_items;
+                        color: $color_dark_items;
+                        .bi-list {
+                            color: $color_dark_items;
                         }
                     }
                 }
             }
-            .btn-contact {
+            
+            .offcanvas {
                 background-color: components.$fondo;
-                &:hover {
+                .offcanvas-header {
+                    font-family: components.$font-family;
+                    font-weight: bold;
+                }
+                .btn-close {
                     background-color: white;
                 }
-            }
-        }
-        .footer {
-            .footer-content {
-                font-size: 0.72rem;
-                color: white;
-                hr {
-                    width: 0.5rem;
+                body.dark & {
+                    background-color: $fondo_dark;
+                    span {
+                        color: $color_dark_items;
+                    }
+                    .btn-close {
+                        background-color: $color_dark_items;
+                    }
                 }
             }
-        }
-    }
+            
+            .logo {
+                width: 3rem;
+                height: 3rem;
+            }
+            
+            //--------------------- SEC HOME
+            .sec-home {
+                display: flex;
+                align-items: flex-end;
+                text-align: start;
+                .home-cta {
+                    width: 45rem;
+                    flex: 1;
+                    font-family: components.$font-family;
+                    span {
+                        font-size: 1.2rem;
+                    }
+                    .home-title {
+                        font-size: 3rem;
+                    }
+                    .home-description {
+                        font-weight: 500;
+                    }
+                }
+                .home-img {
+                    img {
+                        height: 35rem;
+                    }
+                }
+                body.dark & {
+                    .main-social {
+                        .bi-social {
+                            color: $color_dark_items;
+                            &:hover {
+                                color: grey;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //---------------------- icono animado mouse
+            .scroll-down-btn {
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                border: 2px solid black;
+                width: 1.2rem;
+                height: 2rem;
+                border-radius: 85px;
+                left: -50%;
+                // transform: translateX(50%);
+                transform: translatex(-70%);
+                .mouse {
+                    position: absolute;
+                    background-color: black;
+                    left: 50%;
+                    width: 0.1rem;
+                    height: 0.3rem;
+                    border-radius: 15px;
+                    animation: mouse 2s infinite;
+                }
+                body.dark & {
+                    border: 2px solid $color_dark_items;
+                    .mouse {
+                        background-color: $color_dark_items;
+                    }
+                }
+            }
+            
+            @keyframes mouse {
+                0% {
+                    top: 20%;
+                    transform: translate(-50%, 20%);
+                    opacity: 1;
+                }
+                100% {
+                    top: 50%;
+                    transform: translate(-50%, 60%);
+                    opacity: 0;
+                }
+            }
+            
+            //------------------- SEC PROJECTS
+            .sec-projects {
+                @include section-display();
+                .row {
+                    gap: 20rem;
+                    .card {
+                        width: 23rem;
+                    }
+                    body.dark & {
+                        .card {
+                            background-color: $fondo_dark;
+                            .card-img-top-1 {
+                                content: url("../assets/img/Portfolio.png");
+                            }
+                        }
+                        .btn-light-line {
+                            color: $color_dark_items;
+                            border-color: $color_dark_items;
+                            &:hover {
+                                border-color: grey;
+                                color: $fondo_dark;
+                            }
+                        }
+                        .btn-light-line-bold {
+                            @extend .btn-light-line;
+                        }
+                    }
+                }
+                .intro {
+                    .intro-title {
+                        font-size: 3.5rem;
+                        font-weight: 900;
+                        font-family: components.$font-family;
+                    }
+                    .decription-title {
+                        font-weight: 400;
+                        font-family: components.$font-family;
+                    }
+                }
+            }
+            
+            //----------------------SEC ABOUT
+            .sec-about {
+                @extend .sec-projects,
+                .intro;
+                .row {
+                    gap: 2.5rem;
+                }
+                .description {
+                    text-align: justify;
+                    .description-about {
+                        font-size: 1rem;
+                        font-family: components.$font-family;
+                    }
+                    .image-about {
+                        width: 31rem;
+                        height: 31rem;
+                    }
+                }
+                .tools-title {
+                    font-family: components.$font-family;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 100%;
+                    color: black;
+                    // margin: 1.2rem 0;
+                    body.dark & {
+                        color: $color_dark_items;
+                    }
+                }
+                .tools-tech {
+                    .row {
+                        .tools {
+                            .tools-description {
+                                font-size: 1.2rem;
+                                font-weight: 500;
+                                line-height: 100%;
+                                color: black;
+                            }
+                            .description {
+                                font-size: 1rem;
+                                line-height: 40px;
+                                color: black;
+                                font-family: components.$font-family;
+                            }
+                        }
+                        cite {
+                            font-family: 'Grape Nuts', cursive;
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            
+            //---------------------- SEC CONTACT
+            .sec-contact {
+                @extend .sec-projects,
+                .intro;
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .contact-img {
+                    height: 23rem;
+                }
+                body.dark & {
+                    .contact-img {
+                        height: 23rem;
+                        content: url("../assets/img/contact-image-light\ 1.png");
+                    }
+                    .contact {
+                        .btn-contact {
+                            color: $color_dark_items;
+                            border-color: $color_dark_items;
+                            font-size: 2rem;
+                            &:hover {
+                                border-color: grey;
+                                color: $fondo_dark;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //---------------------- SEC FOOTER
+            .footer {
+                display: flex;
+                justify-content: space-around;
+                background-color: black;
+                margin: auto;
+                padding: 1.2rem;
+                max-width: 100%;
+                .footer-content {
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    color: white;
+                    hr {
+                        flex-grow: -2;
+                        width: 0.5rem;
+                        // border: none;
+                        border-top: 2px solid white;
+                    }
+                }
+                body.dark & {
+                    background-color: $color_dark_items;
+                    color: $fondo_dark;
+                    .main-social-footer {
+                        .bi-social-footer {
+                            color: $fondo_dark;
+                            &:hover {
+                                color: grey;
+                            }
+                        }
+                    }
+                    .footer-content {
+                        color: #1D1D1E;
+                        hr {
+                            color: #1D1D1E;
+                        }
+                    }
+                }
+            }
+            
+            @media(max-width: 990px) {
+                .navbar {
+                    .btn-response {
+                        .theme {
+                            order: -1;
+                        }
+                        display: flex;
+                        justify-content: space-around;
+                        width: 8rem;
+                    }
+                    .offcanvas {
+                        .offcanvas-body {
+                            .navbar-nav {
+                                gap: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .scroll-down-btn {
+                    left: -50%;
+                }
+                .sec-home {
+                    margin-top: 0.5rem;
+                    justify-content: center;
+                    .home-cta {
+                        text-align: center;
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .sec-projects {
+                    .row {
+                        gap: 2.0rem;
+                        .intro {
+                            text-align: center;
+                        }
+                        .card {
+                            width: 18rem;
+                            .btn-light-line {
+                                width: 7.5rem;
+                            }
+                            .btn-light-line-bold {
+                                width: 7.5rem;
+                            }
+                        }
+                    }
+                }
+                .sec-about {
+                    .description {
+                        .row {
+                            gap: 2.0rem;
+                        }
+                        .image-about {
+                            width: 16rem;
+                            height: 16rem;
+                        }
+                    }
+                    .tools-title {
+                        margin-top: 0.6rem;
+                    }
+                    .tools-tech {
+                        .row {
+                            gap: 0.5rem;
+                        }
+                    }
+                }
+                .sec-contact {
+                    background-image: url("../assets/img/contact-image 1.png");
+                    background-repeat: no-repeat;
+                    background-position: 100%;
+                    background-size: 45%;
+                    .btn-contact {
+                        background-color: components.$fondo;
+                        width: 6rem;
+                        font-size: 1rem;
+                        &:hover {
+                            background-color: white;
+                        }
+                    }
+                    body.dark & {
+                        background-image: url("../assets/img/contact-image-light\ 1.png");
+                        .contact {
+                            .btn-contact {
+                                background-color: #1D1D1E;
+                                width: 6rem;
+                                font-size: 1rem;
+                                &:hover {
+                                    background-color: white;
+                                    border-color: grey;
+                                    color: $fondo_dark;
+                                }
+                            }
+                        }
+                    }
+                }
+                .footer {
+                    .footer-content {
+                        font-size: 0.72rem;
+                        color: white;
+                        hr {
+                            width: 0.5rem;
+                        }
+                    }
+                }
+            }
