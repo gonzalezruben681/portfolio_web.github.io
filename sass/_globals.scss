@@ -140,7 +140,7 @@
             //---------------------- icono animado mouse
             .scroll-down-btn {
                 display: inline-block;
-                position: absolute;
+                position: relative;
                 text-decoration: none;
                 border: 2px solid black;
                 width: 1.2rem;
@@ -364,23 +364,39 @@
                         }
                     }
                 }
-            }
-            
-            @media (max-width: 768px) {
-                .scroll-down-btn {
-                    display: inline-block;
-                    position: absolute;
-                    left: 47.2%;
-                    top: 41%;
-                }
                 .sec-home {
-                    margin-top: 0.5rem;
+                    margin-top: 1rem;
                     justify-content: center;
                     .home-cta {
                         text-align: center;
                         span {
                             font-size: 1rem;
                         }
+                    }
+                    .home-img{
+                        width:1rem;
+                    }
+                }
+                .scroll-down-btn {
+                    display: none;
+                }
+            }
+            
+            @media (max-width: 768px) {
+                .scroll-down-btn {
+                    display: none;
+                }
+                .sec-home {
+                    margin-top: 1rem;
+                    justify-content: center;
+                    .home-cta {
+                        text-align: center;
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+                    .home-img{
+                       display:none;
                     }
                 }
                 .sec-projects {

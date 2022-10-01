@@ -246,7 +246,7 @@ body.dark .sec-home .row .main-social .bi-social:hover {
 
 .scroll-down-btn {
   display: inline-block;
-  position: absolute;
+  position: relative;
   text-decoration: none;
   border: 2px solid black;
   width: 1.2rem;
@@ -432,16 +432,8 @@ body.dark .footer .footer-content hr {
   .navbar .offcanvas .offcanvas-body .navbar-nav {
     gap: 2rem;
   }
-}
-@media (max-width: 768px) {
-  .scroll-down-btn {
-    display: inline-block;
-    position: absolute;
-    left: 47.2%;
-    top: 41%;
-  }
   .sec-home {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     justify-content: center;
   }
   .sec-home .home-cta {
@@ -449,6 +441,30 @@ body.dark .footer .footer-content hr {
   }
   .sec-home .home-cta span {
     font-size: 1rem;
+  }
+  .sec-home .home-img {
+    width: 1rem;
+  }
+  .scroll-down-btn {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .scroll-down-btn {
+    display: none;
+  }
+  .sec-home {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  .sec-home .home-cta {
+    text-align: center;
+  }
+  .sec-home .home-cta span {
+    font-size: 1rem;
+  }
+  .sec-home .home-img {
+    display: none;
   }
   .sec-projects .row, .sec-about .row, .sec-contact .row {
     gap: 2rem;
