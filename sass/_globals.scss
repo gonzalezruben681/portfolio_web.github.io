@@ -99,34 +99,38 @@
             
             //--------------------- SEC HOME
             .sec-home {
-                display: flex;
-                align-items: flex-end;
-                text-align: start;
-                .home-cta {
-                    width: 45rem;
-                    flex: 1;
-                    font-family: components.$font-family;
-                    span {
-                        font-size: 1.2rem;
+                // @include section-display();
+                // display: flex;
+                // align-items: flex-end;
+                // text-align: start;
+                .row{
+                    gap:7rem;
+                    .home-cta {
+                        // width: 45rem;
+                        // flex: 1;
+                        font-family: components.$font-family;
+                        span {
+                            font-size: 1.2rem;
+                        }
+                        .home-title {
+                            font-size: 3rem;
+                        }
+                        .home-description {
+                            font-weight: 500;
+                        }
                     }
-                    .home-title {
-                        font-size: 3rem;
+                    .home-img {
+                        img {
+                            height: 35rem;
+                        }
                     }
-                    .home-description {
-                        font-weight: 500;
-                    }
-                }
-                .home-img {
-                    img {
-                        height: 35rem;
-                    }
-                }
-                body.dark & {
-                    .main-social {
-                        .bi-social {
-                            color: $color_dark_items;
-                            &:hover {
-                                color: grey;
+                    body.dark & {
+                        .main-social {
+                            .bi-social {
+                                color: $color_dark_items;
+                                &:hover {
+                                    color: grey;
+                                }
                             }
                         }
                     }
@@ -136,15 +140,16 @@
             //---------------------- icono animado mouse
             .scroll-down-btn {
                 display: inline-block;
-                position: relative;
+                position: absolute;
                 text-decoration: none;
                 border: 2px solid black;
                 width: 1.2rem;
                 height: 2rem;
                 border-radius: 85px;
-                left: -50%;
-                // transform: translateX(50%);
+                left: 50%;
+                top: 90%;
                 transform: translatex(-70%);
+                // transform: translatex(-70%);
                 .mouse {
                     position: absolute;
                     background-color: black;
@@ -363,7 +368,10 @@
             
             @media (max-width: 768px) {
                 .scroll-down-btn {
-                    left: -50%;
+                    display: inline-block;
+                    position: absolute;
+                    left: 47.2%;
+                    top: 41%;
                 }
                 .sec-home {
                     margin-top: 0.5rem;

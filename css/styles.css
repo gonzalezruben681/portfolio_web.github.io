@@ -219,44 +219,41 @@ body.dark .offcanvas .btn-close {
   height: 3rem;
 }
 
-.sec-home {
-  display: flex;
-  align-items: flex-end;
-  text-align: start;
+.sec-home .row {
+  gap: 7rem;
 }
-.sec-home .home-cta {
-  width: 45rem;
-  flex: 1;
+.sec-home .row .home-cta {
   font-family: "Heebo";
 }
-.sec-home .home-cta span {
+.sec-home .row .home-cta span {
   font-size: 1.2rem;
 }
-.sec-home .home-cta .home-title {
+.sec-home .row .home-cta .home-title {
   font-size: 3rem;
 }
-.sec-home .home-cta .home-description {
+.sec-home .row .home-cta .home-description {
   font-weight: 500;
 }
-.sec-home .home-img img {
+.sec-home .row .home-img img {
   height: 35rem;
 }
-body.dark .sec-home .main-social .bi-social {
+body.dark .sec-home .row .main-social .bi-social {
   color: #EFEFEF;
 }
-body.dark .sec-home .main-social .bi-social:hover {
+body.dark .sec-home .row .main-social .bi-social:hover {
   color: grey;
 }
 
 .scroll-down-btn {
   display: inline-block;
-  position: relative;
+  position: absolute;
   text-decoration: none;
   border: 2px solid black;
   width: 1.2rem;
   height: 2rem;
   border-radius: 85px;
-  left: -50%;
+  left: 50%;
+  top: 90%;
   transform: translatex(-70%);
 }
 .scroll-down-btn .mouse {
@@ -438,7 +435,10 @@ body.dark .footer .footer-content hr {
 }
 @media (max-width: 768px) {
   .scroll-down-btn {
-    left: -50%;
+    display: inline-block;
+    position: absolute;
+    left: 47.2%;
+    top: 41%;
   }
   .sec-home {
     margin-top: 0.5rem;
