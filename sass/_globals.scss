@@ -140,14 +140,14 @@
             //---------------------- icono animado mouse
             .scroll-down-btn {
                 display: inline-block;
-                position: relative;
+                position: absolute;
                 text-decoration: none;
                 border: 2px solid black;
                 width: 1.2rem;
                 height: 2rem;
                 border-radius: 85px;
                 left: 50%;
-                top: 90%;
+                top: 93%;
                 transform: translatex(-70%);
                 // transform: translatex(-70%);
                 .mouse {
